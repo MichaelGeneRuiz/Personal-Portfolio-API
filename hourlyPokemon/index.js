@@ -6,14 +6,14 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max) + 1;
 }
 
-const randomDexNum = getRandomInt(905);
+const randomDexNum = getRandomInt(1025);
 
 const client = new DynamoDBClient({});
 const docClient = DynamoDBDocumentClient.from(client);
 
 export const handler = async (event) => {
   try {
-    const res = await fetch("https://graphqlpokemon.favware.tech/v7", {
+    const res = await fetch("https://graphqlpokemon.favware.tech/v8", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
